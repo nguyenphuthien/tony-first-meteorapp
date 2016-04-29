@@ -4,7 +4,10 @@ Template.postSubmit.events({
 
     var info = {
       viName: $(e.target).find('[name=viName]').val(),
-      enName: $(e.target).find('[name=enName]').val()
+      enName: $(e.target).find('[name=enName]').val(),
+      email: $(e.target).find('[name=email]').val(),
+      phone: $(e.target).find('[name=phone]').val(),
+      website: $(e.target).find('[name=website]').val()
     };
 
     Meteor.call('infoInsert', info, function(error, result) {
