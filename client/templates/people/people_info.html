@@ -2,6 +2,10 @@
     <div class="post">
         <div class="post-content">
             <h3><a href="{{viName}}">{{viName}}</a><span>{{enName}}</span></h3>
+            <p>
+            submitted by {{author}}
+            {{#if ownPost}}<a href="{{pathFor 'infoEdit'}}">Edit</a>{{/if}}
+          </p>
         </div>
         <a href="{{pathFor 'personPage'}}" class="discuss btn btn-default">Information</a>
     </div>

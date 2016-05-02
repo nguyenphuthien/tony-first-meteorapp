@@ -1,0 +1,19 @@
+<template name="infoEdit">
+  <form class="main form page">
+    <div class="form-group">
+      <label class="control-label" for="viName">viName</label>
+      <div class="controls">
+          <input name="viName" id="viName" type="text" value="{{viName}}" placeholder="Your viName" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="enName">enName</label>
+      <div class="controls">
+          <input name="enName" id="enName" type="text" value="{{enName}}" placeholder="Name your post" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete post</a>
+  </form>
+</template>
