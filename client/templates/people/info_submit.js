@@ -15,8 +15,7 @@ Template.postSubmit.events({
       if (error)
         return alert(error.reason);
       if (result.infoExists)
-        alert('This link has already been posted');
-
+        throwError('This link has already been posted');
 
       Router.go('personPage', {_id: result._id});  
     });
