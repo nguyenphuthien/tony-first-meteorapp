@@ -1,3 +1,16 @@
+Template.infoEdit.onCreated(function() {
+  Session.set('infoEditErrors', {});
+});
+
+Template.infoEdit.helpers({
+  errorMessage: function(field) {
+    return Session.get('infoEditErrors')[field];
+  },
+  errorClass: function (field) {
+    return !!Session.get('infoEditErrors')[field] ? 'has-error' : '';
+  }
+});
+
 Template.infoEdit.events({
   'submit form': function(e) {
     e.preventDefault();
@@ -8,6 +21,10 @@ Template.infoEdit.events({
       viName: $(e.target).find('[name=viName]').val(),
       enName: $(e.target).find('[name=enName]').val()
     }
+
+    var errors = validateInfo(personProperties);
+    if (errors.viName || errors.enName)
+      return Session.set('infoEditErrors', errors);
 
     Infos.update(currentPersonId, {$set: personProperties}, function(error) {
       if (error) {

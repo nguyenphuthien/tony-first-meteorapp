@@ -1,33 +1,38 @@
 <template name="postSubmit">
   <form class="main form page">
-    <div class="form-group">
+    <div class="form-group {{errorClass 'viName'}}">
       <label class="control-label" for="viName">viName</label>
       <div class="controls">
           <input name="viName" id="viName" type="text" value="" placeholder="Your viname" class="form-control"/>
+          <span class="help-block">{{errorMessage 'viName'}}</span>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'enName'}}">
       <label class="control-label" for="enName">enName</label>
       <div class="controls">
           <input name="enName" id="enName" type="text" value="" placeholder="Name your enName" class="form-control"/>
+          <span class="help-block">{{errorMessage 'enName'}}</span>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'email'}}">
       <label class="control-label" for="email">email</label>
       <div class="controls">
           <input name="email" id="email" type="text" value="" placeholder="Your email here" class="form-control"/>
+          <span class="help-block">{{errorMessage 'email'}}</span>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'phone'}}">
       <label class="control-label" for="phone">phone</label>
       <div class="controls">
           <input name="phone" id="phone" type="text" value="" placeholder="Your phone number" class="form-control"/>
+          <span class="help-block">{{errorMessage 'phone'}}</span>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group {{errorClass 'website'}}">
       <label class="control-label" for="website">website</label>
       <div class="controls">
           <input name="website" id="website" type="text" value="" placeholder="Your website address" class="form-control"/>
+          <span class="help-block">{{errorMessage 'website'}}</span>
       </div>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
