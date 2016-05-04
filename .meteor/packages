@@ -28,3 +28,4 @@ check
 audit-argument-checks
 accounts-facebook
 service-configuration
+practicalmeteor:mocha
